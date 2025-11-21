@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="https://i.imgur.com/GkH2a5N.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PTT Stock Parser AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ptt: {
+                dark: '#1f1f2e',
+                card: '#2a2a3d',
+                highlight: '#4b4b68',
+                text: '#e0e0e0',
+                push: '#ff5252', // Red for Push (Traditional PTT logic: Red is Push/Good in some contexts, but often Push is distinct color)
+                // Actually PTT web: Push is yellow/white, Boo is Red, Arrow is yellow.
+                // Let's map standard web colors: Push (Yellow/Green), Boo (Red), Arrow (Gray)
+              }
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "recharts": "https://aistudiocdn.com/recharts@^3.4.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-slate-900 text-slate-200 antialiased selection:bg-blue-500 selection:text-white">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
