@@ -5,6 +5,8 @@ export const analyzeComments = async (
   post: PttPost,
   apiKey: string
 ): Promise<AiAnalysisResult> => {
+  console.log(apiKey);
+
   const ai = new GoogleGenAI({
     apiKey: 'AIzaSyDd4wJEWP5_LS5FK-2IEtzLsfJ1AagNOwo',
   });
